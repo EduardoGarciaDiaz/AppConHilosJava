@@ -12,9 +12,13 @@ public class Programa2 {
         Thread p2 = new Thread(corredor2);
         Thread p3 = new Thread(corredor3);
 
+        // un método join() para que los otros hilos no puedan iniciar hasta que termine el hilo que se está ejecutando.
         p1.start();
+        p1.join();
         p2.start();
+        p2.join();
         p3.start();
+        p3.join();
 
     }
 }
