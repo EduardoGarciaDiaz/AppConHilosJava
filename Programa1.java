@@ -1,4 +1,4 @@
-public class Programa1 implements Runnable {
+public class Programa1 extends Thread {
     // Implementar métodos de Runnable
     // Se ejecuta al llamar al método start()
 
@@ -9,7 +9,7 @@ public class Programa1 implements Runnable {
 
     public static void main(String[] args) {
         //Creando un hilo en Java
-        Thread hilo = new Thread(new Programa1(), "Hilo1");
+        Programa1 hilo = new Programa1();
         hilo.start();
         System.out.println("Este codigo esta fuera del hilo");
     }
